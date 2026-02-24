@@ -1,0 +1,22 @@
+
+
+
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+
+
+.container-back {
+  display: flow-root;
+  background-image: url('/images/fondo.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  width: 100%;
+}

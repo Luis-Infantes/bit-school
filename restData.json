@@ -1,0 +1,108 @@
+{
+  "courses": [
+    {
+      "id": "1",
+      "title": "Angular",
+      "seatCapacity": 10,
+      "instructorName": "John Jones",
+      "details": {
+        "description": "Curso avanzado de Angular",
+        "skills": [
+          "Angular"
+        ]
+      }
+    },
+    {
+      "id": "2",
+      "title": "React",
+      "seatCapacity": 12,
+      "instructorName": "Sarah Miller",
+      "details": {
+        "description": "Fundamentos de React y creación de componentes reutilizables",
+        "skills": [
+          "React"
+        ]
+      }
+    },
+    {
+      "id": "3",
+      "title": "Node.js",
+      "seatCapacity": 8,
+      "instructorName": "David Johnson",
+      "details": {
+        "description": "Back-end con Node.js y Express basado en prácticas reales",
+        "skills": [
+          "Node.js",
+          "JavaScript"
+        ]
+      }
+    },
+    {
+      "id": "4",
+      "title": "C(Sharp)",
+      "seatCapacity": 15,
+      "instructorName": "John Jones",
+      "details": {
+        "description": "Programación orientada a objetos con C# desde cero",
+        "skills": [
+          "C#",
+          "OOP",
+          "DotNet"
+        ]
+      }
+    },
+    {
+      "id": "5",
+      "title": "Python",
+      "seatCapacity": 9,
+      "instructorName": "Laura Smith",
+      "details": {
+        "description": "Python para análisis de datos y automatización",
+        "skills": [
+          "Python",
+          "Pandas"
+        ]
+      }
+    },
+    {
+      "id": "6",
+      "title": "Java",
+      "seatCapacity": 14,
+      "instructorName": "Laura Smith",
+      "details": {
+        "description": "Curso completo de Java para aplicaciones empresariales",
+        "skills": [
+          "Java"
+        ]
+      }
+    },
+    {
+      "id": "7",
+      "title": "TypeScript",
+      "seatCapacity": 6,
+      "instructorName": "John Jones",
+      "details": {
+        "description": "TypeScript moderno aplicado a proyectos web",
+        "skills": [
+          "TypeScript",
+          "JavaScript",
+          "ES6"
+        ]
+      }
+    },
+    {
+      "id": "8",
+      "title": "Vue",
+      "seatCapacity": 12,
+      "instructorName": "David Johnson",
+      "details": {
+        "description": "Framework progresivo de JavaScript diseñado para desarrollar la interfaz de usuario",
+        "skills": [
+          "JavaScript",
+          "Html",
+          "CSS"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\core",
+    "\\src\\app\\core\\components",
+    "\\src\\app\\core\\components\\form-courses",
+    "\\src\\app\\core\\components\\table-courses",
+    "\\src\\app\\core\\pipes",
+    "\\src\\app\\models"
+  ],
+  "SelectedNode": "\\restData.json",
+  "PreviewInSolutionExplorer": false
+}

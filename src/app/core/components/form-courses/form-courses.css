@@ -1,0 +1,84 @@
+
+
+
+.form-styles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Asegura que ocupe todo el ancho */
+  margin: 0 auto; /* Centra el contenedor mismo si tiene un ancho fijo */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+  .form-styles form {
+    border-radius: 8px;
+    border: 1px solid #d1d1d1;
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.7);
+    box-sizing: border-box; /* Crucial para que el padding no sume al ancho */
+    margin: 0 auto;
+  }
+
+  .form-styles label {
+    display: block;
+    margin-bottom: 8px;
+    color: #d1d1d1;
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+
+  .form-styles h4 {
+    color: #d1d1d1;
+    font-weight: 500;
+  }
+
+  .form-styles input,
+  .form-styles select,
+  .form-styles textarea {
+    width: 100%; /* Forzamos el ancho completo */
+
+    margin-bottom: 20px;
+    border: 1px solid #d1d1d1;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    color: #333;
+    transition: border-color 0.3s ease;
+  }
+
+
+
+
+
+
+
+.input-group {
+  display: flex;
+  width: 100%;
+  align-items: stretch; /* Para que el botón X tenga la misma altura que el input */
+  margin-bottom: 5px; /* Espacio para que el error respire debajo */
+}
+
+  /* El input crece para ocupar el espacio */
+  .input-group .form-control {
+    flex: 1;
+    margin-bottom: 0 !important; /* Quitamos el margen inferior solo aquí para que pegue con el botón */
+  }
+
+
+.create-styles {
+
+    margin-top:10px;
+}
+
+
+.error-message {
+  color: #ff4d4d; /* Rojo suave que resalte en el fondo negro */
+  font-size: 0.75rem;
+  margin-bottom: 10px;
+  font-weight: 500;
+}

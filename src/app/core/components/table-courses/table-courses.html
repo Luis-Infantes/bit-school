@@ -1,0 +1,79 @@
+
+
+<div class="table-container">
+
+
+  <div class="table-actions">
+
+
+    <div class="mb-3" style="max-width: 300px;">
+      <label class="text-light small">Filtrar por Instructor:</label>
+      <select class="form-select bg-dark text-light border-secondary" [(ngModel)]="selectedInstructor">
+        <option value="None">Todos los instructores</option>
+        <option *ngFor="let name of getUniqueInstructors()" [value]="name">
+          {{ name }}
+        </option>
+      </select>
+    </div>
+
+    <div class="mt-2">
+      <button type="reset"
+              class="btn btn-outline-warning m-3"
+              (click)="createCourse()"
+              [routerLink]="['/form-courses','createCourse']">
+        Nuevo curso
+      </button>
+    </div>
+
+    <h2>Cursos disponibles 2026/2027</h2>
+
+  </div>
+
+  <table class="custom-table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Título</th>
+        <th>Plazas</th> <!-- Nombre más corto para ahorrar espacio -->
+        <th>Instructor</th>
+        <th>Descripción (Skills)</th>
+        <th class="text-center">Editar</th>
+        <th class="text-center">Eliminar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let course of getCourses() | filterInstructorPipe:selectedInstructor" [highlight]="'dimgrey'">
+        <td>{{course.id}}</td>
+        <td>{{course.title}}</td>
+        <td>{{course.seatCapacity}}</td>
+        <td>
+          {{ course.instructorName }}
+        </td>
+
+        <td class="cell-description">
+          <!-- Clase para controlar el texto largo -->
+          <ng-container *ngIf="course.details else empty">
+            {{course.details.description}} - ({{course.details!.skills!.join(', ')}})
+          </ng-container>
+          <ng-template #empty>-</ng-template>
+        </td>
+        <td class="text-center">
+          <button class="btn btn-outline-warning btn-sm"
+                  (click)="editCourse(course.id)"
+                  [routerLink]="['/form-courses','editCourse', course.id]"
+                  >
+            <i class="bi bi-pencil-square"> Editar</i>
+          </button>
+        </td>
+        <td class="text-center">
+          <button class="btn btn-outline-danger btn-sm" (click)="deleteCourse(course.id)">
+            <i class="bi bi-x-square"> Eliminar</i>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+

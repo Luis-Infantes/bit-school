@@ -1,0 +1,57 @@
+
+
+
+/* Espaciado para el botón de crear */
+
+
+.table-container {
+  width: 100%;
+  overflow-x: auto; /* El scroll horizontal necesario */
+  -webkit-overflow-scrolling: touch;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+
+  
+}
+
+.table-actions {
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+}
+
+  .table-actions h2 {
+    color: #d1d1d1;
+    margin-left: auto; 
+    margin-bottom: 0; 
+    padding: 0 20px;
+  }
+
+.custom-table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 800px; /* Garantiza que las columnas no se aplasten */
+  background-color: #808080; /* Azul pizarra muy oscuro sólido */
+  color: #d1d1d1;
+  border: 1px solid #334155;
+}
+
+  /* Encabezado Sólido */
+  .custom-table thead tr {
+    background-color: #020617; /* Casi negro sólido */
+    color: #d1d1d1;
+    text-align: left;
+    border-bottom: 2px solid #f5b50a; /* Toque dorado para separar del cuerpo */
+  }
+
+  .custom-table th,
+  .custom-table td {
+    padding: 16px 20px;
+    border-bottom: 1px solid #1e293b;
+    
+  }
+
+
+
+

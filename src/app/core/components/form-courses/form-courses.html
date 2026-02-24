@@ -1,0 +1,112 @@
+
+
+<div class="form-styles">
+
+
+
+  <form [formGroup]="courseForm" #form="ngForm" (ngSubmit)="submitForm()" (reset)="resetForm()">
+    <h4>Añadir o editar curso</h4>
+
+    <!-- TITULO -->
+    <div class="form-group">
+      <label>Título: </label>
+      <input class="form-control"
+             formControlName="title"
+             appControlError
+             [appControlError]="courseForm.get('title')!"
+             #errTitle="controlError" />
+
+      <div *ngIf="errTitle.message" class="error-message">
+        {{ errTitle.message }}
+      </div>
+    </div>
+
+    <!-- PLAZAS DISPONIBLES -->
+    <div class="form-group">
+      <label>Plazas disponibles: </label>
+      <input class="form-control" type="number" formControlName="seatCapacity"
+             appControlError
+             [appControlError]="courseForm.get('seatCapacity')!"
+             #errSeats="controlError" />
+
+      <div *ngIf="errSeats.message" class="error-message">
+        {{ errSeats.message }}
+      </div>
+    </div>
+
+    <!-- INSTRUCTOR -->
+    <div class="form-group">
+      <label>Instructor: </label>
+      <input class="form-control" formControlName="instructorName"
+             appControlError
+             [appControlError]="courseForm.get('instructorName')!"
+             #errInst="controlError" />
+
+      <div *ngIf="errInst.message" class="error-message">
+        {{ errInst.message }}
+      </div>
+    </div>
+
+    <ng-container formGroupName="details">
+      <!-- DESCRIPCIÓN -->
+      <div class="form-group">
+        <label>Descripción: </label>
+        <input class="form-control" formControlName="description"
+               appControlError
+               [appControlError]="courseForm.get('details.description')!"
+               #errDesc="controlError" />
+
+        <div *ngIf="errDesc.message" class="error-message">
+          {{ errDesc.message }}
+        </div>
+      </div>
+
+      <ng-container formArrayName="skills">
+        <button class="btn btn-primary my-2" type="button" (click)="addSkillControl()">
+          Añadir skill
+        </button>
+
+        <!-- SKILLS (ARRAY) -->
+        <div class="form-group" *ngFor="let skill of skills.controls; let i = index">
+          <label>Skill {{i+1}}</label>
+          <div class="input-group">
+            <input class="form-control"
+                   [formControlName]="i"
+                   appControlError
+                   [appControlError]="skill"
+                   #errSkill="controlError" />
+            <button class="btn btn-outline-danger btn-sm ms-2" type="button" (click)="removeSkillControl(i)">
+              <i class="bi bi-x-square"></i>
+            </button>
+          </div>
+
+          <div *ngIf="errSkill.message" class="error-message">
+            {{ errSkill.message }}
+          </div>
+        </div>
+
+        <!-- ERROR DE ARRAY (UNIQUE) -->
+        <div *ngIf="skills.hasError('unique')" class="error-message">
+          {{ validation.getValidatorErrorMessage('unique') }}
+        </div>
+      </ng-container>
+    </ng-container>
+
+    <!-- BOTONES -->
+    <div>
+      <button type="submit" class="btn btn-primary" [class.btn-warning]="editing" [disabled]="form.invalid">
+        {{editing ? "Guardar" : "Crear"}}
+      </button>
+      <button type="reset"
+              class="btn btn-secondary m-1"
+              routerLink="/"
+              >Cancelar</button>
+    </div>
+
+  </form>
+</div>
+
+
+
+
+
