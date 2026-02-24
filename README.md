@@ -1,52 +1,82 @@
+BIT SCHOOL — Course Management - Angular Project
+Project in which I developed an Angular app for course management, allowing dynamic and efficient CRUD operations (Create, Read, Update, and Delete).
 
-Bit School — Course Management - Angular Project
-A project in which I developed an Angular app for course management, allowing dynamic and efficient CRUD operations (Create, Read, Update, and Delete).
-Project Structure:
+---------
+
+PROJECT STRUCTURE:
 The main logic resides in src/app.
 Models Folder (Data Layer)
 
-Model file containing the definition of the data models used in the application.
-Repository file that contains the business logic and the generic CRUD methods to manage courses.
+Model file that contains the definition of the data models we work with.
+Repository file that contains the business logic and the generic CRUD methods used to manage the courses.
 RestDataSource file, which is the initial data source linked to a JSON file that simulates a database.
 
+---------
 
-Core Folder (Application Layer)
-Components:
+CORE (Application Layer)
+COMPONENTS:
 
-TableCourses Component: Displays data in a table format, with options to edit or delete.
+TableCourses Component: Data visualization in table format, with options to edit or delete.
 FormCourses Component: Handles data input or editing with generic and custom validations.
 
-Directives:
+DIRECTIVES:
 
 ControlError: Custom directive for centralized error message handling in forms.
-Row Highlight (hover): Visual enhancement to highlight table rows on hover.
+Highlight (hover) effect on table rows to improve visual navigation.
 
-Pipes:
+PIPES:
 
-Custom filter pipe to perform a search by instructor name.
+Custom filter to perform a search by instructor name.
 
-Services:
+SERVICES:
 
-ValidationService: Handles generic and custom validations.
+ValidationService: Manages generic and custom validations.
+
+---------
+
+MAIN FEATURES:
+
+Service created to group all generic and custom validations. The purpose is to understand how everything works this way.
+Management of the most generic validations to later apply them to each field.
+Custom validation created to avoid duplicate skills when adding two or more during editing or creation.
+Custom validation created to prevent duplicate course titles by comparing the entered information with the data already in the table.
+Custom pipe designed to filter instructor names instantly.
+Routing configuration to navigate through the buttons to the creation or editing form.
+
+---------
+
+PROJECT SETUP:
+
+1) Clone the repo (or unzip the project)
+
+git clone https://github.com/Luis-Infantes/bit-school
+cd bit-school
+
+2) Install dependencies
+
+  npm install
+
+3) Start the data source (localhost:3500)
+  
+  npm run json
+  
+4) Start the application in another terminal (localhost:4200)
+
+   ng serve
 
 
-Main Features:
 
-I used a service to group all generic and custom validations. The goal was to explore how everything works this way.
-I implemented the most generic validations to reuse them across different fields.
-I created a custom validation to avoid duplicate skills when adding two or more during creation or editing.
-I created a custom validation to prevent duplicate course titles by comparing the new value with the existing table data.
-I designed a custom pipe to filter instructor names in real time.
-Routing configuration to navigate through buttons to the creation or editing form.
+---------
 
 
--------------------------------------------------------------------------------------
 
-Bit School -- Gestión de Cursos - Angular Project
+BIT SCHOOL -- Gestión de Cursos - Angular Project
 
 Proyecto en el cual he desarrollado una app en Angular para la gestión de cursos, permitiendo realizar operaciones CRUD (Crear, Leer, Actualizar y Borrar) de forma dinámica y eficiente.
 
-Estructura del Proyecto:
+---------
+
+ESTRUCTURA DEL PROYECTO:
 
 La lógica principal reside en src/app.
 
@@ -60,10 +90,10 @@ Archivo de restdatasource que es la fuente de datos inicial vinculada a un archi
 
 ---------
 
-Carpeta Core (Capa de Aplicación)
+CORE (Capa de Aplicación)
 
 
-Components:
+COMPONENTES:
 
 Componente TableCourses: Visualización de datos en formato tabla. Con opción a editar o eliminar.
 
@@ -71,39 +101,55 @@ Componente FormCourses: Gestión de entrada o edición de datos con validaciones
 
 
 
-Directives:
+DIRECTIVAS:
 
 ControlError: Directiva personalizada para la gestión centralizada de mensajes de error en formularios.
+
 Resaltado (hover) en filas de la tabla para mejorar la navegación visual.
 
 
-Pipes:
+PIES:
 
 Filtro personalizado para realizar una búsqueda por nombre del instructor.
 
 
 
 
-Services:
+SERVICES:
 
 ValidationService: Gestión de las validaciones genéricas y personalizadas.
 
 ---------
 
-Características Principales:
+CARACTERISTICAS PRINCIPALES:
 
-He usado un servicio para englobar todas las validaciones genericas y las personalizas. La finalizadad es ver como funciona todo de esta forma.
+Servicio para englobar todas las validaciones genericas y las personalizas. La finalizadad es ver como funciona todo de esta forma.
 
-He gestionado la validaciones más genéricas para luego aplicarlas en cada campo
+Gestión de las validaciones más genéricas para luego aplicarlas en cada campo
 
-He creado una validacion personaliza para evitar duplicados en skills al editar o crear, cuando añadimos dos o más.
+Creación de una validacion personaliza para evitar duplicados en skills al editar o crear, cuando añadimos dos o más.
 
-He creado una validacion personalizada para evitar duplicados en el titulo del curso. Contrastará la información introducida con la que hay en la tabla.
+Creación de una validacion personalizada para evitar duplicados en el titulo del curso. Contrastará la información introducida con la que hay en la tabla.
 
-He diseñado una pipe personalizada para realizar un filtro del nombre del instructor en el momento.
+Diseño de una pipe personalizada para realizar un filtro del nombre del instructor en el momento.
 
 Configuración del routing para navegar a través de los botones al formulario de creación o de edición.
 
+---------
+
+ARRANQUE DEL PROYECTO:
 
 
+1) Clonar el repo (o descomprime el ZIP)
+git clone https://github.com/Luis-Infantes/bit-school
+cd bit-school
 
+2) Instalar dependencias
+npm install
+
+3) Arrancar la fuente de datos (localhost:3500)
+npm run json
+
+4) Arrancar la aplicación en otra consola (localhost:4200)
+ng serve
+   
