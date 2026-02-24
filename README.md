@@ -42,67 +42,67 @@ Routing configuration to navigate through buttons to the creation or editing for
 
 -------------------------------------------------------------------------------------
 
-## Bit School -- Gestión de Cursos - Angular Project
+Bit School -- Gestión de Cursos - Angular Project
 
 Proyecto en el cual he desarrollado una app en Angular para la gestión de cursos, permitiendo realizar operaciones CRUD (Crear, Leer, Actualizar y Borrar) de forma dinámica y eficiente.
 
-### Estructura del Proyecto:
+Estructura del Proyecto:
 
 La lógica principal reside en src/app.
 
-### Carpeta Models (Capa de Datos)
+Carpeta Models (Capa de Datos)
 
-# Archivo modelo que contiene la definición de los modelos de datos con los que trabajamos.
+Archivo modelo que contiene la definición de los modelos de datos con los que trabajamos.
 
-# Archivo repesitory que contiene la lógica de negocio y los métodos CRUD genéricos para gestionar los cursos.
+Archivo repesitory que contiene la lógica de negocio y los métodos CRUD genéricos para gestionar los cursos.
 
-# Archivo de restdatasource que es la fuente de datos inicial vinculada a un archivo Json que simula a una base de datos.
-
----------
-
-### Carpeta Core (Capa de Aplicación)
-
-
-##Components:
-
-# Componente TableCourses: Visualización de datos en formato tabla. Con opción a editar o eliminar.
-
-# Componente FormCourses: Gestión de entrada o edición de datos con validaciones genéricas y personalizadas.
-
-
-
-##Directives:
-
-# ControlError: Directiva personalizada para la gestión centralizada de mensajes de error en formularios.
-# Resaltado (hover) en filas de la tabla para mejorar la navegación visual.
-
-
-## Pipes:
-
-# Filtro personalizado para realizar una búsqueda por nombre del instructor.
-
-
-
-
-## Services:
-
-# ValidationService: Gestión de las validaciones genéricas y personalizadas.
+Archivo de restdatasource que es la fuente de datos inicial vinculada a un archivo Json que simula a una base de datos.
 
 ---------
 
-## Características Principales:
+Carpeta Core (Capa de Aplicación)
 
-# He usado un servicio para englobar todas las validaciones genericas y las personalizas. La finalizadad es ver como funciona todo de esta forma.
 
-# He gestionado la validaciones más genéricas para luego aplicarlas en cada campo
+Components:
 
-# He creado una validacion personaliza para evitar duplicados en skills al editar o crear, cuando añadimos dos o más.
+Componente TableCourses: Visualización de datos en formato tabla. Con opción a editar o eliminar.
 
-# He creado una validacion personalizada para evitar duplicados en el titulo del curso. Contrastará la información introducida con la que hay en la tabla.
+Componente FormCourses: Gestión de entrada o edición de datos con validaciones genéricas y personalizadas.
 
-# He diseñado una pipe personalizada para realizar un filtro del nombre del instructor en el momento.
 
-# Configuración del routing para navegar a través de los botones al formulario de creación o de edición.
+
+Directives:
+
+ControlError: Directiva personalizada para la gestión centralizada de mensajes de error en formularios.
+Resaltado (hover) en filas de la tabla para mejorar la navegación visual.
+
+
+Pipes:
+
+Filtro personalizado para realizar una búsqueda por nombre del instructor.
+
+
+
+
+Services:
+
+ValidationService: Gestión de las validaciones genéricas y personalizadas.
+
+---------
+
+Características Principales:
+
+He usado un servicio para englobar todas las validaciones genericas y las personalizas. La finalizadad es ver como funciona todo de esta forma.
+
+He gestionado la validaciones más genéricas para luego aplicarlas en cada campo
+
+He creado una validacion personaliza para evitar duplicados en skills al editar o crear, cuando añadimos dos o más.
+
+He creado una validacion personalizada para evitar duplicados en el titulo del curso. Contrastará la información introducida con la que hay en la tabla.
+
+He diseñado una pipe personalizada para realizar un filtro del nombre del instructor en el momento.
+
+Configuración del routing para navegar a través de los botones al formulario de creación o de edición.
 
 
 
